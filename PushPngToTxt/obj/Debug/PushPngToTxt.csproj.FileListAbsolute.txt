@@ -1,0 +1,7 @@
+D:\RiderProject\tools\PushPngToTxt\bin\Debug\PushPngToTxt.exe
+D:\RiderProject\tools\PushPngToTxt\bin\Debug\PushPngToTxt.pdb
+D:\RiderProject\tools\PushPngToTxt\obj\Debug\PushPngToTxt.csproj.AssemblyReference.cache
+D:\RiderProject\tools\PushPngToTxt\obj\Debug\PushPngToTxt.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\PushPngToTxt\obj\Debug\PushPngToTxt.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\PushPngToTxt\obj\Debug\PushPngToTxt.exe
+D:\RiderProject\tools\PushPngToTxt\obj\Debug\PushPngToTxt.pdb

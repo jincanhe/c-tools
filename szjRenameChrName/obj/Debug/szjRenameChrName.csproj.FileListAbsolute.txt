@@ -1,0 +1,10 @@
+D:\RiderProject\tools\szjRenameChrName\bin\Debug\szjRenameChrName.exe
+D:\RiderProject\tools\szjRenameChrName\bin\Debug\szjRenameChrName.pdb
+D:\RiderProject\tools\szjRenameChrName\bin\Debug\Newtonsoft.Json.dll
+D:\RiderProject\tools\szjRenameChrName\bin\Debug\Newtonsoft.Json.xml
+D:\RiderProject\tools\szjRenameChrName\obj\Debug\szjRenameChrName.csproj.AssemblyReference.cache
+D:\RiderProject\tools\szjRenameChrName\obj\Debug\szjRenameChrName.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\szjRenameChrName\obj\Debug\szjRenameChrName.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\szjRenameChrName\obj\Debug\szjRenameChrName.csproj.CopyComplete
+D:\RiderProject\tools\szjRenameChrName\obj\Debug\szjRenameChrName.exe
+D:\RiderProject\tools\szjRenameChrName\obj\Debug\szjRenameChrName.pdb

@@ -1,0 +1,7 @@
+D:\RiderProject\tools\TestWebsocket\obj\Debug\TestWebsocket.csproj.AssemblyReference.cache
+D:\RiderProject\tools\TestWebsocket\obj\Debug\TestWebsocket.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\TestWebsocket\obj\Debug\TestWebsocket.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\TestWebsocket\bin\Debug\TestWebsocket.exe
+D:\RiderProject\tools\TestWebsocket\bin\Debug\TestWebsocket.pdb
+D:\RiderProject\tools\TestWebsocket\obj\Debug\TestWebsocket.exe
+D:\RiderProject\tools\TestWebsocket\obj\Debug\TestWebsocket.pdb

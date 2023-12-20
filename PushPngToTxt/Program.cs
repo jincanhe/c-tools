@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 
 namespace PushPngToTxt
 {
     internal class Program
     {
-        static void ProcessDirectory(string dir)
+        private static void ProcessDirectory(string dir)
         {
             var files = Directory.GetFiles(dir);
             var dirs = Directory.GetDirectories(dir);
@@ -20,7 +21,7 @@ namespace PushPngToTxt
                 {
                     var path = Path.GetDirectoryName(file);
                     var ext = Path.GetExtension(file);
-                    var relPath = file.Replace(@"..\Resources\", "").Replace(@"..\Resources", "").Replace("\\", "/");
+                    var relPath = file.Replace(@"D:\szj-game\Resources\", "").Replace("\\", "/");
 
                     if (ext.Equals(".png"))
                         loadList.Add(relPath);
@@ -31,7 +32,7 @@ namespace PushPngToTxt
                 string fileName = Path.GetFileNameWithoutExtension(directory);
                 string newDirectory = fileName + ".txt";
 
-                File.WriteAllLines(Path.Combine(@"..\Resources\image", newDirectory), loadList);
+                File.WriteAllLines(Path.Combine(@"D:\szj-game\Resources\IGF", newDirectory), loadList);
 
                 foreach (var png in loadList)
                 {
@@ -42,11 +43,31 @@ namespace PushPngToTxt
 
         }
 
-        static void Main(string[] args)
+        private static void SjzPublishr()
         {
-            Console.WriteLine("Resources");
-            ProcessDirectory(@"..\Resources\image");
+            const string exePath = @"D:\szj-game\publishtool\SzjPublisher.exe";
+            var originalDirectory = Environment.CurrentDirectory;
 
+            try
+            {
+                var exeDirectory = Path.GetDirectoryName(exePath);
+                Environment.CurrentDirectory = exeDirectory;
+
+                var process = new Process();
+                process.StartInfo.FileName = Path.GetFileName(exePath);
+                process.Start();
+            }
+            finally
+            {
+                Environment.CurrentDirectory = originalDirectory;
+            }
+        }
+
+        private static void Main(string[] args)
+        {
+            ProcessDirectory( @"D:\szj-game\Resources\IGF");
+            SjzPublishr();
+            Console.WriteLine("done!");
         }
     }
 }

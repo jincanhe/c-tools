@@ -1,0 +1,7 @@
+D:\RiderProject\tools\ccstudioToGame\bin\Debug\ccstudioToGame.exe
+D:\RiderProject\tools\ccstudioToGame\bin\Debug\ccstudioToGame.pdb
+D:\RiderProject\tools\ccstudioToGame\obj\Debug\ccstudioToGame.csproj.AssemblyReference.cache
+D:\RiderProject\tools\ccstudioToGame\obj\Debug\ccstudioToGame.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\ccstudioToGame\obj\Debug\ccstudioToGame.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\ccstudioToGame\obj\Debug\ccstudioToGame.exe
+D:\RiderProject\tools\ccstudioToGame\obj\Debug\ccstudioToGame.pdb

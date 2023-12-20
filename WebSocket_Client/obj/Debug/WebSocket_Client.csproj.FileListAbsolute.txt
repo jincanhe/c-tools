@@ -1,0 +1,7 @@
+D:\RiderProject\tools\WebSocket_Client\bin\Debug\WebSocket_Client.exe
+D:\RiderProject\tools\WebSocket_Client\bin\Debug\WebSocket_Client.pdb
+D:\RiderProject\tools\WebSocket_Client\obj\Debug\WebSocket_Client.csproj.AssemblyReference.cache
+D:\RiderProject\tools\WebSocket_Client\obj\Debug\WebSocket_Client.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\WebSocket_Client\obj\Debug\WebSocket_Client.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\WebSocket_Client\obj\Debug\WebSocket_Client.exe
+D:\RiderProject\tools\WebSocket_Client\obj\Debug\WebSocket_Client.pdb

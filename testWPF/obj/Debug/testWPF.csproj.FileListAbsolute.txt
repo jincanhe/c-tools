@@ -1,0 +1,16 @@
+D:\RiderProject\tools\testWPF\bin\Debug\testWPF.exe.config
+D:\RiderProject\tools\testWPF\bin\Debug\testWPF.exe
+D:\RiderProject\tools\testWPF\bin\Debug\testWPF.pdb
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.csproj.AssemblyReference.cache
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\testWPF\obj\Debug\MainWindow.g.cs
+D:\RiderProject\tools\testWPF\obj\Debug\App.g.cs
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF_MarkupCompile.cache
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF_MarkupCompile.lref
+D:\RiderProject\tools\testWPF\obj\Debug\MainWindow.baml
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.g.resources
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.Properties.Resources.resources
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.csproj.GenerateResource.cache
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.exe
+D:\RiderProject\tools\testWPF\obj\Debug\testWPF.pdb

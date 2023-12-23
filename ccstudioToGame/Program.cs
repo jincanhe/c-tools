@@ -115,6 +115,7 @@ namespace ccstudioToGame
                         var csbName = csbpath.Replace(@"D:\work\szj-game\Resources\res\game\", "");
                         tempList.Add(csbName);
                     }
+
                     MoveCsb(tempList);
                 }
                 else
@@ -128,14 +129,15 @@ namespace ccstudioToGame
         {
             var updateList = new List<string>()
             {
-                @"main\mainView.csb",
+                // @"main\mainView.csb",
                 // @"Task\NewNewTaskView.csb",
                 // @"login\LoginPhoneView.csb",
+                @"minimap\mapUnLockView.csb",
             };
 
             var tempPlistList = new List<string>()
             {
-                // "common",
+                "common",
                 // "mainUI",
             };
 

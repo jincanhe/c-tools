@@ -23,20 +23,31 @@ namespace ccstudioToGame
             }
 
 
-            const string targetPath = @"D:\szj-game\Resources\res\plist";
+
+            var targetPaths = new List<string>()
+            {
+                @"D:\szj-game\Resources\res\plist",
+                @"D:\szj-game\ResourcesWin\res\plist"
+            };
+
             foreach (var filePath in updatePlistList)
             {
                 var relativePath = filePath.Replace(@"D:\work\szj-game\Resources\res\plist\", "");
-                var destinationPath = Path.Combine(targetPath, relativePath);
 
-                var destinationFolder = Path.GetDirectoryName(destinationPath);
-                if (!Directory.Exists(destinationFolder))
+                foreach (var targetPath in targetPaths)
                 {
-                    Directory.CreateDirectory(destinationFolder);
+                    var destinationPath = Path.Combine(targetPath, relativePath);
+
+                    var destinationFolder = Path.GetDirectoryName(destinationPath);
+                    if (!Directory.Exists(destinationFolder))
+                    {
+                        Directory.CreateDirectory(destinationFolder);
+                    }
+
+                    File.Copy(filePath, destinationPath, true);
+                    Console.WriteLine(filePath + "  to  " + destinationPath);
                 }
 
-                File.Copy(filePath, destinationPath, true);
-                Console.WriteLine(filePath + "  to  " + destinationPath);
             }
 
             Console.WriteLine();
@@ -50,30 +61,41 @@ namespace ccstudioToGame
             //lingQ用法。。
             var updateCsbList = updateList.Select(fileName => Path.Combine(basePath, fileName)).ToList();
 
-            const string targetPath = @"D:\szj-game\Resources\res\game";
+            var targetPaths = new List<string>()
+            {
+                @"D:\szj-game\Resources\res\game",
+                @"D:\szj-game\ResourcesWin\res\game",
+            };
+
+
 
             foreach (var filePath in updateCsbList)
             {
                 var relativePath = filePath.Replace(@"D:\work\szj-game\Resources\res\game\", "");
-                var destinationPath = Path.Combine(targetPath, relativePath);
 
-                var destinationFolder = Path.GetDirectoryName(destinationPath);
-
-                if (!File.Exists(filePath))
+                foreach (var targetPath in targetPaths)
                 {
-                    Console.WriteLine("不存在: "+ filePath);
-                    continue;
+                    var destinationPath = Path.Combine(targetPath, relativePath);
+
+                    var destinationFolder = Path.GetDirectoryName(destinationPath);
+
+                    if (!File.Exists(filePath))
+                    {
+                        Console.WriteLine("不存在: "+ filePath);
+                        continue;
+                    }
+
+                    if (!Directory.Exists(destinationFolder))
+                    {
+                        Directory.CreateDirectory(destinationFolder);
+                        Console.WriteLine("创建文件夹: " +  destinationFolder);
+
+                    }
+
+                    File.Copy(filePath, destinationPath, true);
+                    Console.WriteLine(filePath + "  to  " + destinationPath);
                 }
 
-                if (!Directory.Exists(destinationFolder))
-                {
-                    Directory.CreateDirectory(destinationFolder);
-                    Console.WriteLine("创建文件夹: " +  destinationFolder);
-
-                }
-
-                File.Copy(filePath, destinationPath, true);
-                Console.WriteLine(filePath + "  to  " + destinationPath);
 
             }
         }
@@ -129,16 +151,29 @@ namespace ccstudioToGame
         {
             var updateList = new List<string>()
             {
-                // @"main\mainView.csb",
+                @"main\mainView.csb",
+                // @"chouka\chouka_main.csb",
+                // @"chouka\chou_reward.csb",
                 // @"Task\NewNewTaskView.csb",
                 // @"login\LoginPhoneView.csb",
-                @"minimap\mapUnLockView.csb",
+                // @"minimap\mapUnLockView.csb",
+                // @"buildView\selectCraftView.csb",
+                // @"licheng\main_1.csb",
+                // @"commonPop\MineReward.csb",
+                // @"commonPop\LoginWaitView.csb",
+                // @"commonPop\buySomethingView.csb",
+                // @"buildView\BuildView.csb",
             };
 
             var tempPlistList = new List<string>()
             {
-                "common",
-                // "mainUI",
+                // "chouka",
+
+                "mainUI",
+                // "selectCardUI",
+                // "common",
+                // "task",
+                // "buildUI"
             };
 
             var fileList = new List<string>()
@@ -147,10 +182,13 @@ namespace ccstudioToGame
             };
 
             MovePlist(tempPlistList);
-            MoveCsb(updateList);
+             MoveCsb(updateList);
             Movefile(fileList);
-            SjzPublishr();
+            // SjzPublishr();
             Console.WriteLine("done!");
+            DateTime currentTime = DateTime.Now;
+            Console.WriteLine(currentTime);
+
         }
     }
 }

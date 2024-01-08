@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWPF", "testWPF\testWPF.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "renameItem", "renameItem\renameItem.csproj", "{C3C9A391-98C5-4B6E-954E-6FD650FEC5BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ffmpegTools", "ffmpegTools\ffmpegTools.csproj", "{DA239304-A43C-4CBD-BDC7-45DDE5144F90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{C3C9A391-98C5-4B6E-954E-6FD650FEC5BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3C9A391-98C5-4B6E-954E-6FD650FEC5BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3C9A391-98C5-4B6E-954E-6FD650FEC5BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA239304-A43C-4CBD-BDC7-45DDE5144F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA239304-A43C-4CBD-BDC7-45DDE5144F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA239304-A43C-4CBD-BDC7-45DDE5144F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA239304-A43C-4CBD-BDC7-45DDE5144F90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

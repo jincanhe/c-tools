@@ -1,0 +1,7 @@
+D:\RiderProject\tools\ffmpegTools\bin\Debug\ffmpegTools.exe
+D:\RiderProject\tools\ffmpegTools\bin\Debug\ffmpegTools.pdb
+D:\RiderProject\tools\ffmpegTools\obj\Debug\ffmpegTools.csproj.AssemblyReference.cache
+D:\RiderProject\tools\ffmpegTools\obj\Debug\ffmpegTools.csproj.SuggestedBindingRedirects.cache
+D:\RiderProject\tools\ffmpegTools\obj\Debug\ffmpegTools.csproj.CoreCompileInputs.cache
+D:\RiderProject\tools\ffmpegTools\obj\Debug\ffmpegTools.exe
+D:\RiderProject\tools\ffmpegTools\obj\Debug\ffmpegTools.pdb

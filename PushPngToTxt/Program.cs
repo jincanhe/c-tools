@@ -7,12 +7,12 @@ namespace PushPngToTxt
 {
     internal class Program
     {
-        private static void ProcessDirectory(string dir)
+        private static void ReadPathToTxt(string dir)
         {
             var files = Directory.GetFiles(dir);
             var dirs = Directory.GetDirectories(dir);
             foreach (var subdir in dirs)
-                ProcessDirectory(subdir);
+                ReadPathToTxt(subdir);
             var loadList = new List<string>();
 
             if (files.Length > 0)
@@ -38,9 +38,9 @@ namespace PushPngToTxt
                 {
                     Console.WriteLine(newDirectory + " : " + png);
                 }
+
                 Console.WriteLine("\n");
             }
-
         }
 
         private static void SjzPublishr()
@@ -63,13 +63,68 @@ namespace PushPngToTxt
             }
         }
 
+        private static void DeleteAndCopyToWin(List<string> orginPaths)
+        {
+            foreach (var orginPath in orginPaths)
+            {
+                var targetPath = orginPath.Replace("Resources", "ResourcesWn");
+
+                if (Directory.Exists(targetPath))
+                {
+                    Directory.Delete(targetPath, true);
+                    Console.WriteLine("Delete: " + targetPath);
+                }
+                else
+                {
+                    Directory.CreateDirectory(targetPath);
+                    Console.WriteLine("Create: " + targetPath);
+                }
+
+                copyHandler(orginPath);
+                Console.WriteLine("copyToWin: " + orginPath);
+                foreach (var file in Directory.GetDirectories(orginPath)) // 遍历源文件夹中的文件
+                {
+                    copyHandler(file);
+                    Console.WriteLine("copyToWin: " + file);
+                }
+            }
+
+            Console.WriteLine();
+        }
+
+        private static void copyHandler(string orginPath)
+        {
+            var targetPath = orginPath.Replace("Resources", "ResourcesWn");
+
+            if (!Directory.Exists(targetPath))
+            {
+                Directory.CreateDirectory(targetPath);
+            }
+
+
+            foreach (var file in Directory.GetFiles(orginPath)) // 遍历源文件夹中的文件
+            {
+                var fileName = Path.GetFileName(file);
+                var destFile = Path.Combine(targetPath, fileName); // 目标文件路径
+                File.Copy(file, destFile, true); // 复制文件到目标文件夹
+            }
+        }
+
         private static void Main(string[] args)
         {
-            ProcessDirectory( @"D:\szj-game\Resources\IGF");
-            SjzPublishr();
+            bool isPublishr = false;
+            var orginPaths = new List<string>
+            {
+                @"D:\szj-game\Resources\IGF",
+                @"D:\szj-game\Resources\shader",
+            };
+            ReadPathToTxt(@"D:\szj-game\Resources\IGF");
+            DeleteAndCopyToWin(orginPaths);
+            if (isPublishr)
+            {
+                SjzPublishr();
+            }
             Console.WriteLine("done!");
         }
     }
 }
-
-

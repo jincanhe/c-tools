@@ -67,7 +67,7 @@ namespace PushPngToTxt
         {
             foreach (var orginPath in orginPaths)
             {
-                var targetPath = orginPath.Replace("Resources", "ResourcesWn");
+                var targetPath = orginPath.Replace("Resources", "ResourcesWin");
 
                 if (Directory.Exists(targetPath))
                 {
@@ -94,7 +94,7 @@ namespace PushPngToTxt
 
         private static void copyHandler(string orginPath)
         {
-            var targetPath = orginPath.Replace("Resources", "ResourcesWn");
+            var targetPath = orginPath.Replace("Resources", "ResourcesWin");
 
             if (!Directory.Exists(targetPath))
             {

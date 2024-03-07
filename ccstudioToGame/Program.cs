@@ -10,18 +10,16 @@ namespace ccstudioToGame
     {
         private static void MovePlist(List<string> tempPlistList)
         {
-
             const string basePath = @"D:\work\szj-game\Resources\res\plist";
 
             var updatePlistList = new List<string>();
             foreach (var fileName in tempPlistList)
             {
-                var filePath_png = Path.Combine(basePath,  Path.ChangeExtension(fileName, ".png"));
-                var filePath_plist = Path.Combine(basePath,  Path.ChangeExtension(fileName, ".plist"));
+                var filePath_png = Path.Combine(basePath, Path.ChangeExtension(fileName, ".png"));
+                var filePath_plist = Path.Combine(basePath, Path.ChangeExtension(fileName, ".plist"));
                 updatePlistList.Add(filePath_png);
                 updatePlistList.Add(filePath_plist);
             }
-
 
 
             var targetPaths = new List<string>()
@@ -47,7 +45,6 @@ namespace ccstudioToGame
                     File.Copy(filePath, destinationPath, true);
                     Console.WriteLine(filePath + "  to  " + destinationPath);
                 }
-
             }
 
             Console.WriteLine();
@@ -55,7 +52,6 @@ namespace ccstudioToGame
 
         private static void MoveCsb(List<string> updateList)
         {
-
             const string basePath = @"D:\work\szj-game\Resources\res\game";
 
             //lingQ用法。。
@@ -66,7 +62,6 @@ namespace ccstudioToGame
                 @"D:\szj-game\Resources\res\game",
                 @"D:\szj-game\ResourcesWin\res\game",
             };
-
 
 
             foreach (var filePath in updateCsbList)
@@ -81,22 +76,19 @@ namespace ccstudioToGame
 
                     if (!File.Exists(filePath))
                     {
-                        Console.WriteLine("不存在: "+ filePath);
+                        Console.WriteLine("不存在: " + filePath);
                         continue;
                     }
 
                     if (!Directory.Exists(destinationFolder))
                     {
                         Directory.CreateDirectory(destinationFolder);
-                        Console.WriteLine("创建文件夹: " +  destinationFolder);
-
+                        Console.WriteLine("创建文件夹: " + destinationFolder);
                     }
 
                     File.Copy(filePath, destinationPath, true);
                     Console.WriteLine(filePath + "  to  " + destinationPath);
                 }
-
-
             }
         }
 
@@ -151,7 +143,7 @@ namespace ccstudioToGame
         {
             var updateList = new List<string>()
             {
-                @"main\mainView.csb",
+                // @"main\mainView.csb",
                 // @"chouka\chouka_main.csb",
                 // @"chouka\chou_reward.csb",
                 // @"Task\NewNewTaskView.csb",
@@ -162,18 +154,28 @@ namespace ccstudioToGame
                 // @"commonPop\MineReward.csb",
                 // @"commonPop\LoginWaitView.csb",
                 // @"commonPop\buySomethingView.csb",
+                // @"commonPop\commonPop_small.csb",
                 // @"buildView\BuildView.csb",
+                // @"buildView\newBuildWork.csb",
+                // @"buildingToCraft\buildFoodView.csb",
+                // @"Task\ItemIntroduce.csb",
+                // @"editView\editView.csb",
+                @"guideView\xinshouView.csb",
             };
 
             var tempPlistList = new List<string>()
             {
                 // "chouka",
 
-                "mainUI",
+                // "mainUI",
                 // "selectCardUI",
                 // "common",
+                // "niantulu",
                 // "task",
                 // "buildUI"
+                // "MiniMapViewPlist",
+                // "edit"
+                "tutorial"
             };
 
             var fileList = new List<string>()
@@ -182,13 +184,12 @@ namespace ccstudioToGame
             };
 
             MovePlist(tempPlistList);
-             MoveCsb(updateList);
+            MoveCsb(updateList);
             Movefile(fileList);
             // SjzPublishr();
             Console.WriteLine("done!");
             DateTime currentTime = DateTime.Now;
             Console.WriteLine(currentTime);
-
         }
     }
 }
